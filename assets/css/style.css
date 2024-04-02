@@ -35,6 +35,15 @@
     max-width: 1100px;
     margin: auto;
 }
+.f-60{
+    flex-basis: 60%;
+}
+.f-40{
+    flex-basis: 40%;
+}
+.f-33{
+    flex-basis: 33%;
+}
 /* general style */
 
 .btn_defaul_red{
@@ -73,6 +82,7 @@ header.header{
     background-color: transparent;
     border: none;
     outline: none;
+    transition: all .23s;
 }
 .btn_side img{
     width: 100%;
@@ -683,7 +693,97 @@ a.item_card_select:hover{
     font-size: 2em;
     margin-left: 3px;
 }
+/* =========== body dash ================ */
+
+
+/* ==================== footer ======================= */
 .footer_dash{
     background-color: var(--color-principal);
+    position: relative;
 }
-/* =========== body dash ================ */
+.content_footer_dash{
+    padding: 60px 10px 10px;
+}
+.list_social_footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.list_social_footer li{
+    width: 60px;
+    display: flex;
+}
+.list_social_footer li a{
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+}
+.list_social_footer li a img{
+    width: 100%;
+}
+.col_footer h3{
+    color: var(--color-white);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.col_footer ul li a{
+    color: var(--color-terciaria);
+    font-weight: 300;
+}
+.col_footer p{
+    color: var(--color-terciaria);
+    line-height: 1.4em;
+    font-size: .8em;
+    text-align: center;
+    font-weight: 300;
+}
+.footer_dash .img_footer{
+    width: 100%;
+}
+.bottom_footer{
+    width: 100%;
+}
+.list_payment_footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 5%;
+}
+.list_payment_footer img{
+    height: 30px;
+}
+.links_footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 0 0;
+}
+.links_footer p{
+    color: var(--color-white);
+    font-weight: 200;
+    font-size: .8em;
+    padding: 0 20px;
+}
+.links_footer p:first-child{
+    border-right: 1px solid var(--color-secundaria);
+}
+.img_footer_left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.img_footer_right{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* ==================== footer ======================= */
+
+
+
+/* others */
+.rotate{
+    transform: rotate(180deg);
+}
+/* others */
