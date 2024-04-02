@@ -31,6 +31,10 @@
 .bg-color-terciaria{
     background-color: var(--color-terciaria);
 }
+.container{
+    max-width: 1100px;
+    margin: auto;
+}
 /* general style */
 
 .btn_defaul_red{
@@ -420,6 +424,7 @@ a.item_card_select:hover{
     max-width: 1100px;
     margin: auto;
     position: relative;
+    padding-bottom: 80px;
 }
 .out_player{
     background-color: var(--color-principal);
@@ -532,5 +537,153 @@ a.item_card_select:hover{
 .inter_jackpot img{
     width: 100%;
 }
+.head_slots{
+    padding: 0;
+    border-bottom: 1px solid var(--color-terciaria);
+}
+.head_slots ul{
+    display: flex;
+}
+.head_slots ul li a{
+    padding: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-terciaria);
+}
+.head_slots ul li a.active{
+    border-bottom: 2px solid var(--color-red);
+}
+.head_slots ul li a.active p{
+    color: var(--color-red);
+}
+.head_slots ul li a img{
+    width: 32px;
+}
+.head_slots ul li a p{
+    width: 100%;
+    text-align: center;
+    font-size: .7em;
+}
 
+.slots_game{
+    background-color: var(--color-principal);
+    border-radius: 10px;
+    padding: 10px;
+}
+.block_cards{
+    padding: 10px;
+    position: relative;
+}
+.block_cards::after{
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    width: calc(100% - 40px);
+    height: 1px;
+    background-color: var(--color-terciaria);
+}
+.block_cards:last-child:after{
+    display: none;
+}
+.head_block_cards{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.head_block_cards img{
+    margin-right: 10px;
+    width: 42px;
+}
+.head_block_cards h3{
+    color: var(--color-white);
+    font-weight: 300;
+}
+
+.list_block_cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list_block_cards a{
+    width: calc(100% / 6 - 20px);
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: var(--color-white);
+    position: relative;
+}
+.list_block_cards a.best::before{
+    content: "BEST";
+    background-color: #FF2B1C;
+    padding: 0 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.1em;
+    border-radius: 3px;
+}
+.over_play_block_card{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(1,1,1, .8), transparent);
+    opacity: 0;
+    transition: all .6s;
+}
+.list_block_cards a:hover .over_play_block_card{
+    opacity: 1;
+}
+.list_block_cards a img.img_block_card{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.info_block_cards{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    text-transform: capitalize;
+}
+.info_block_cards p{
+    text-shadow: 2px 2px 10px #000000;
+}
+.info_block_cards p small{
+    font-size: .7em;
+}
+.icon_star_block_card{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.play_block_card{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-red);
+    z-index: 10;
+}
+.play_block_card i{
+    color: var(--color-white)!important;
+    font-size: 2em;
+    margin-left: 3px;
+}
+.footer_dash{
+    background-color: var(--color-principal);
+}
 /* =========== body dash ================ */
