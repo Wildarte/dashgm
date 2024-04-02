@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Dashboard</title>
     <style>
-        .center .slide-item{
-            background-color: red;
-            margin: 10px;
-        }
+
     </style>
 </head>
 <body>
@@ -54,7 +51,7 @@
             </div>
 
             <div class="header_center">
-                <img src="assets/img/valentines-day.png" alt="">
+                <img src="assets/img/valentines-day2.png" alt="">
             </div>
 
             <div class="header right">
@@ -244,14 +241,28 @@
 
             <div class="container_body_dash">
 
+                <div class="flag_app">
+                    <div class="close_flag_app">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+                    <div class="content_flag_app">
+                        <a href="">
+                            <img src="assets/img/logo-with-text.png" alt="">
+                        </a>
+
+                        <a href="" class="btn_defaul_red">
+                            Baixar APP
+                        </a>
+                    </div>
+                </div>
+
                 <div class="slide_show">
-                    <div class="center">
-                        <div class="slide-item">your content</div>
-                        <div class="slide-item">your content</div>
-                        <div class="slide-item">your content</div>
-                        <div class="slide-item">your content</div>
-                        <div class="slide-item">your content</div>
-                        <div class="slide-item">your content</div>
+                    <div class="slide_center">
+                        <a href=""><img src="assets/img/slide/slide.jpg" alt=""></a>
+                        <a href=""><img src="assets/img/slide/slide2.jpg" alt=""></a>
+                        <a href=""><img src="assets/img/slide/slide3.jpg" alt=""></a>
+                        <a href=""><img src="assets/img/slide/slide4.jpg" alt=""></a>
+                        <a href=""><img src="assets/img/slide/slide5.jpg" alt=""></a>
                     </div>
                 </div>
 
@@ -263,6 +274,18 @@
                     <div class="icon_envelope">
                         <i class="bi bi-envelope-fill"></i>
                     </div>
+                </div>
+
+                <div class="out_jackpot">
+                    <div class="inter_jackpot">
+                        <img src="assets/img/out_jackpot.png" alt="">
+                    </div>
+                </div>
+
+
+
+                <div class="slots_game">
+                    
                 </div>
 
             </div>
@@ -311,10 +334,13 @@
         atualizarRelogio();
 
         $(document).ready(function(){
-            $('.center').slick({
+            $('.slide_center').slick({
             centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 3,
+            centerPadding: '120px',
+            dots: true,
+            autoplay: true,
+            autoplayspeed: 4000,
+            slidesToShow: 1,
             responsive: [
                 {
                 breakpoint: 768,
