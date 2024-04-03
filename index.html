@@ -67,15 +67,15 @@
     <main class="main">
 
         <div class="side_menu">
-            <div class="sections_card block_side_menu">
-                <a href="" class="item_card_select">
-                    <img class="icon_button" src="assets/img/icon/icon-fire-off.png" alt="">
+            <div class="sections_card block_side_menu first_section_cards">
+                <a href="#popular" class="item_card_select">
+                    <img class="icon_button" src="assets/img/icon/icon-fire.png" alt="">
                     <p>Popular</p>
 
                     <img src="assets/img/icon/icon-heart.png" alt="" class="float_left">
                     <img src="assets/img/icon/icon-flower.png" alt="" class="float_right">
                 </a>
-                <a href="">
+                <a href="#slots">
                     <img class="icon_button" src="assets/img/icon/icon-roel-off.png" alt="">
 
                     <p>Slots</p>
@@ -83,28 +83,28 @@
                     <img src="assets/img/icon/icon-heart.png" alt="" class="float_left">
                     <img src="assets/img/icon/icon-flower.png" alt="" class="float_right">
                 </a>
-                <a href="">
+                <a href="#cartas">
                     <img class="icon_button" src="assets/img/icon/icon-cards-off.png" alt="">
                     <p>Cartas</p>
 
                     <img src="assets/img/icon/icon-heart.png" alt="" class="float_left">
                     <img src="assets/img/icon/icon-flower.png" alt="" class="float_right">
                 </a>
-                <a href="">
+                <a href="#pescaria">
                     <img class="icon_button" src="assets/img/icon/icon-shark-off.png" alt="">
                     <p>Pescaria</p>
 
                     <img src="assets/img/icon/icon-heart.png" alt="" class="float_left">
                     <img src="assets/img/icon/icon-flower.png" alt="" class="float_right">
                 </a>
-                <a href="">
+                <a href="#esportes">
                     <img class="icon_button" src="assets/img/icon/icon-ball-off.png" alt="">
                     <p>Esporte</p>
 
                     <img src="assets/img/icon/icon-heart.png" alt="" class="float_left">
                     <img src="assets/img/icon/icon-flower.png" alt="" class="float_right">
                 </a>
-                <a href="">
+                <a href="#blockchain">
                     <img class="icon_button" src="assets/img/icon/icon-square-off.png" alt="">
                     <p>Blockchain</p>
 
@@ -238,6 +238,8 @@
         </div>
 
         <div class="body_dash">
+
+            <div class="over_dash"></div>
             
             <img src="assets/img/heart_left.png" alt="" class="img_body_dash_left">
             <img src="assets/img/heart_right.png" alt="" class="img_body_dash_right">
@@ -418,7 +420,7 @@
                         </div>
                     </div>
 
-                    <div class="block_cards" id="Slots">
+                    <div class="block_cards" id="slots">
                         <div class="head_block_cards">
                             <img src="assets/img/icon/icon-reol.png" alt="">
 
@@ -533,7 +535,7 @@
                         </div>
                     </div>
 
-                    <div class="block_cards" id="Cartas">
+                    <div class="block_cards" id="cartas">
                         <div class="head_block_cards">
                             <img src="assets/img/icon/icon-cards.png" alt="">
 
@@ -1084,8 +1086,101 @@
 
     </main>
 
+    <div class="menu_bottom">
+        <ul>
+            <li><a href="" class="active"><i class="bi bi-house-door"></i> <p>Início</p></a></li>
+            <li><a href=""><i class="bi bi-gift"></i> <p>Promoção</p></a></li>
+            <li><a href=""><i class="bi bi-box-arrow-up-right"></i> <p>Agente</p></a></li>
+            <li><a href=""><i class="bi bi-headset"></i> <p>Suporte</p></a></li>
+            <li><a href=""><i class="bi bi-person"></i> <p>Perfil</p></a></li>
+        </ul>
+    </div>
+
     <!-- ================================================ Modals ====================================================== -->
-    <div class="over_modal">
+    <div class="over_modal" id="modal_deposito">
+        
+        <div class="modal" id="content_modal_deposito">
+            <span id="close_modal_deposito">
+                <i class="bi bi-x-lg"></i>
+            </span>
+            <div class="head_modal_white">
+                <p>Bônus Extra De Depósito Inicial</p>
+            </div>
+
+            <div class="content_modal">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Primeiro depósito
+                            </th>
+                            <th>
+                                Valor da Recompensa
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>≥ 10</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 30</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 50</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 100</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 500</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 1.000</td>
+                            <td>55</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 5.000</td>
+                            <td>355</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 10.000</td>
+                            <td>555</td>
+                        </tr>
+                        <tr>
+                            <td>≥ 50.000</td>
+                            <td>3.555</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bottom_modal d-flex">
+                <label for="not">
+                    <input type="checkbox" name="" id="not">
+                    <span>Não estou mais aparecendo hoje</span>
+                </label>
+
+                <label for="hidden">
+                    <input type="checkbox" name="" id="hidden">
+                    <span>Ocultar permanentemente</span>
+                </label>
+
+                <button class="btn_defaul_red">
+                    Prosseguir
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- ================================================ Modals ====================================================== -->
+
+    <!-- ================================================ Modals ====================================================== -->
+    <div class="over_modal" id="modal_register" style="">
         <div class="head_over_modal">
             <span class="close_over_modal" id="close_modal_register">
                 <i class="bi bi-x-lg"></i>
@@ -1108,7 +1203,7 @@
                 <div class="form_row">
                     <label for="">
                         <i class="bi bi-lock-fill"></i>
-                        <input type="password" name="" id="" placeholder="Senha" id="show_pass_register_input">
+                        <input type="password" name="" placeholder="Senha" id="show_pass_register_input">
                         <span class="show_pass" id="show_pass_register">
                             <i class="bi bi-eye-slash-fill"></i>
                         </span>
@@ -1118,7 +1213,7 @@
                 <div class="form_row">
                     <label for="">
                         <i class="bi bi-lock-fill"></i>
-                        <input type="password" name="" id="" placeholder="Confirme a senha novamente, o mesmo que a senha!" id="show_pass_again_register_input">
+                        <input type="password" name="" placeholder="Confirme a senha novamente, o mesmo que a senha!" id="show_pass_again_register_input">
                         <span class="show_pass" id="show_pass_again_register">
                             <i class="bi bi-eye-slash-fill"></i>
                         </span>
@@ -1132,10 +1227,16 @@
                     </label>
                 </div>
 
-                <div class="form_row">
+                <div class="form_row row_select_language">
                     <label for="">
                         <img src="assets/img/logo-brazil.png" alt="">
-                        <span class="field_language">BRL (BRL)</span>
+                        <span class="field_language">BRL (BRL) <i class="bi bi-caret-down"></i></span>
+                        <div class="list_field_language">
+                            <div class="item_list_field_language" id="lang-pt-br">
+                                <img src="assets/img/logo-brazil.png" alt="">
+                                <span>BRL (BRL)</span>
+                            </div>
+                        </div>
                     </label>
                     <p><small>A moeda determina os jogos de terceiros e os métodos de pagamento e não pode ser modificada.</small></p>
                 </div>
@@ -1169,6 +1270,7 @@
         </div>
     </div>
     <!-- ================================================ Modals ====================================================== -->
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
