@@ -38,6 +38,7 @@
                 <div class="select_language">
                     <span>Português <i class="bi bi-caret-down-fill"></i></span>
 
+                    
                     <div class="list_select_language">
                         <div class="option_select_language">
                             Português
@@ -209,10 +210,12 @@
                 <ul class="list_options bg-color-secundaria">
                     <li class="item_has_children">
                         <a href="" class="item_language"><i class="bi bi-globe"></i> Português</a>
+                        <!-- 
                         <ul class="sub_menu">
                             <li><a href="">Português</a></li>
                             <li><a href="">English</a></li>
                         </ul>
+                         -->
                     </li>
                     <li><a href=""><span><i class="bi bi-arrow-down"></i></span> Baixar App</a></li>
                     <li><a href=""><span><i class="bi bi-headset"></i></span> Contactar o suporte</a></li>
@@ -1094,7 +1097,7 @@
                 <p>Registre sua conta</p>
             </div>
 
-            <form action="">
+            <form action="" class="form_modal">
                 <div class="form_row">
                     <label for="">
                         <i class="bi bi-person-fill"></i>
@@ -1105,7 +1108,7 @@
                 <div class="form_row">
                     <label for="">
                         <i class="bi bi-lock-fill"></i>
-                        <input type="password" name="" id="" placeholder="Senha">
+                        <input type="password" name="" id="" placeholder="Senha" id="show_pass_register_input">
                         <span class="show_pass" id="show_pass_register">
                             <i class="bi bi-eye-slash-fill"></i>
                         </span>
@@ -1115,7 +1118,7 @@
                 <div class="form_row">
                     <label for="">
                         <i class="bi bi-lock-fill"></i>
-                        <input type="password" name="" id="" placeholder="Confirme a senha novamente, o mesmo que a senha!">
+                        <input type="password" name="" id="" placeholder="Confirme a senha novamente, o mesmo que a senha!" id="show_pass_again_register_input">
                         <span class="show_pass" id="show_pass_again_register">
                             <i class="bi bi-eye-slash-fill"></i>
                         </span>
@@ -1131,9 +1134,36 @@
 
                 <div class="form_row">
                     <label for="">
-                        <input type="text" name="" id="" value="BRL (BRL)">
-                        <p><small>A moeda determina os jogos de terceiros e os métodos de pagamento e não pode ser modificada.</small></p>
+                        <img src="assets/img/logo-brazil.png" alt="">
+                        <span class="field_language">BRL (BRL)</span>
                     </label>
+                    <p><small>A moeda determina os jogos de terceiros e os métodos de pagamento e não pode ser modificada.</small></p>
+                </div>
+                
+                <div class="form_row field_text">
+                    <label for="">
+                        <input type="checkbox" name="" id="">
+                        <p>Tenho 18 anos, li e concordo <a href="">{{Contrato do usuário}}</a></p>
+                    </label>
+                </div>
+
+                <div class="form_row">
+                    <button type="submit" class="w-100 btn_defaul_red">Registro</button>
+                </div>
+
+                <div class="form_row form_row_links">
+                    <a href="">Contactar Suporte</a>
+                    <a href="">Jogar Grátis</a>
+                    <a href="">Login Agora</a>
+                </div>
+
+                <div class="form_row bottom_form_modal">
+                    <p><span>Outros métodos de início de sessão</span></p>
+
+                    <div class="links_form_modal">
+                        <a href=""><img src="assets/img/google.png" alt=""></a>
+                        <a href=""><img src="assets/img/facebook.png" alt=""></a>
+                    </div>
                 </div>
             </form>
         </div>
