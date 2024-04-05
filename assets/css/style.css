@@ -5,6 +5,7 @@
     --color-quarta: #781931;
     --color-red: #FF3A55;
     --color-yellow: rgb(255, 170, 9);
+    --color-green: #04BE02;
 
     --color-black: #000000;
     --color-white: #ffffff
@@ -118,7 +119,7 @@ header.header{
     border: 1px solid var(--color-terciaria);
     border-radius: 40px;
     color: var(--color-terciaria);
-    font-size: 1em;
+    font-size: .9em;
     cursor: pointer;
 }
 .select_language span{
@@ -1123,6 +1124,134 @@ a.item_card_select:hover{
     display: none;
 }
 
+/* =========== login perfil ========================== */
+.control_money{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.over_balance img{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.over_balance{
+    padding: 2px 5px;
+    border: 1px solid var(--color-terciaria);
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+}
+.refresh_coin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.over_balance .coin{
+    padding: 0 5px;
+    color: var(--color-yellow);
+}
+.header_center_perfil{
+    padding: 0 2%;
+}
+.header_center_perfil img{
+    height: 40px;
+}
+.control_money a{
+    margin: 0 8px;
+}
+.over_user{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 3px;
+    position: relative;
+}
+.over_user:hover{
+    background-color: var(--color-secundaria);
+}
+.over_user .img_user{
+    width: 40px;
+}
+.info_user{
+    color: var(--color-terciaria);
+    font-size: .85em;
+    line-height: 1.1em;
+    padding: 0 8px;
+}
+#copy_id{
+    color: var(--color-red);
+    margin-left: 4px;
+}
+.header_perfil_user{
+    justify-content: space-between;
+    width: 90%;
+    padding: 8px;
+}
+.list_options_user{
+    position: absolute;
+    top: 100%;
+    border-radius: 8px;
+    background-color: var(--color-principal);
+    border: 1px solid var(--color-secundaria);
+    z-index: 10;
+    display: none;
+    transition: all .23s;
+}
+.over_user:hover .list_options_user{
+    display: flex;
+}
+.list_options_user ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.list_options_user ul li{
+    width: 100%;
+    display: flex;
+}
+.list_options_user ul li a{
+    padding: 6px 10px;
+    color: var(--color-terciaria);
+    font-size: .8em;
+    width: 100%;
+    white-space: nowrap;
+}
+.list_options_user ul li a:hover{
+    background-color: var(--color-quarta);
+}
+.list_options_user ul li a i{
+    margin-right: 8px;
+    font-size: 1.4em;
+}
+.icon-green{
+    color: var(--color-green);
+}
+.icon-red{
+    color: var(--color-red);
+}
+.icon-yellow{
+    color: var(--color-yellow);
+}
+.list_options_user ul li.separator{
+    position: relative;
+}
+.list_options_user ul li.separator::before{
+    content: "";
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: calc(90%);
+    height: 1px;
+    background-color: var(--color-secundaria);
+}
+/* =========== login perfil ========================== */
+
+.btn_small{
+    padding: 4px 10px;
+    font-size: .9em;
+}
+
 @media(max-width: 1560px){
     .container{
         max-width: 940px;
@@ -1144,15 +1273,31 @@ a.item_card_select:hover{
         max-width: 820px;
     }
 }
-
+@media(max-width: 1300px){
+    .header_center_perfil{
+        padding: 0 2px;
+    }
+    .header_perfil_user{
+        width: 100%;
+    }
+    .header_perfil_user .logo_site{
+        width: 150px;
+    }
+}
 @media(max-width: 1200px){
     .header_center{
         width: 34%;
+    }
+    .header_perfil_user .count_time{
+        padding: 0 2px;
     }
 }
 @media(max-width: 1060px){
     .header_center{
         width: 24%;
+    }
+    .header_perfil_user .select_language{
+        font-size: .8em;
     }
 }
 
@@ -1278,6 +1423,7 @@ a.item_card_select:hover{
         bottom: 0;
         background-color: var(--color-principal);
         width: 100%;
+        display: flex;
     }
     .menu_bottom ul{
         width: 100%;
