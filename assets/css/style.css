@@ -1245,6 +1245,9 @@ a.item_card_select:hover{
     height: 1px;
     background-color: var(--color-secundaria);
 }
+.btn_deposit{
+    display: none;
+}
 /* =========== login perfil ========================== */
 
 .btn_small{
@@ -1298,6 +1301,55 @@ a.item_card_select:hover{
     }
     .header_perfil_user .select_language{
         font-size: .8em;
+    }
+    .btn_deposit{
+        display: flex;
+        margin: 0 10px;
+        position: relative;
+    }
+    .links_balance, .header_center_perfil, .over_user{
+        display: none;
+    }
+    #btn_deposit_button{
+        padding-left: 8px;
+        border-left: 1px solid rgba(255,255,255, .6);
+        transition: all .23s;
+    }
+    #btn_deposit_button i{
+        transition: all .23s;
+    }
+    .text_btn_deposit{
+        padding-right: 8px;
+    }
+    .list_select_deposit{
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        background-color: var(--color-principal);
+        border: 1px solid var(--color-terciaria);
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        color: var(--color-white);
+        z-index: 10;
+        display: none;
+    }
+    .option_select_deposit{
+        padding: 15px;
+        color: var(--color-white);
+        cursor: pointer;
+        width: 100%;
+        font-size: 1.1em;
+    }
+    .option_select_deposit:hover{
+        background-color: var(--color-secundaria);
+    }
+    .btn_deposit_button_rotate{
+        transform: rotate(180deg);
+        border-left: none!important;
+        border-right: 1px solid var(--color-white);
+        padding-left: 0!important;
+        padding-right: 8px;
     }
 }
 

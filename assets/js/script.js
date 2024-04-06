@@ -87,7 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(function(){
 
-        modal_register.classList.add('d-modal')
+        if(modal_register){
+            modal_register.classList.add('d-modal')
+        }
 
     },2500);
 
@@ -318,3 +320,21 @@ if(first_section_cards){
 }
 
 // =================== control sections =============================================================
+
+
+
+//================== control mobile =======================================================
+const btn_deposit_button = document.getElementById('btn_deposit_button');
+const list_select_deposit = document.querySelector('.list_select_deposit');
+
+if(btn_deposit_button){
+
+    btn_deposit_button.addEventListener('click', () => {
+
+        list_select_deposit.classList.toggle('d-modal');
+
+        btn_deposit_button.querySelector('i').classList.toggle('rotate')
+
+    });
+}
+//================== control mobile =======================================================
