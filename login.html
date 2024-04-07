@@ -67,7 +67,7 @@
                     <a href="" class="btn_default_transparent btn_small">Juros</a>
                 </div>
 
-                <div class="btn_deposit btn_defaul_red btn_small">
+                <div class="btn_deposit btn_defaul_red btn_small btn_set_deposit">
                     <span class="text_btn_deposit">Depósito</span>
                     <span id="btn_deposit_button"><i class="bi bi-caret-down-fill"></i></span>
                     <div class="list_select_deposit">
@@ -79,7 +79,9 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="btn_sarch">
+                    <i class="bi bi-search"></i>
+                </div>
             </div>
 
             <div class="header_center_perfil">
@@ -95,6 +97,25 @@
                 </div>
 
                 <div class="list_options_user">
+                    <div class="head_menu_mobile">
+                        <div class="top_head_menu_mobile">
+                            <img class="img_user_mobile" src="assets/img/user.png" alt="">
+                            <div class="info_top_head_menu_mobile">
+                                <p>ID: <span id="user_id">423215543</span> <span id="copy_id_mobile"><i class="bi bi-copy"></i></span></p>
+                                <p>Conta: <span>user09143023</span></p>
+                                <div class="info_balance_mobile">
+                                    <img src="assets/img/logo-brazil.png" alt="">
+                                    <span id="balance_mobile">0,00</span>
+                                    <img src="assets/img/refresh.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom_head_menu_mobile" style="display: none;">
+                            <a href="" class="btn_mobile_saque btn_account_mobile">Saque</a>
+                            <a href="" class="btn_mobile_deposito btn_account_mobile">Depósito</a>
+                            <a href="" class="btn_account_mobile"></a>
+                        </div>
+                    </div>
                     <ul>
                         <li class="separator"><a href=""><i class="bi bi-megaphone icon-green"></i>Convidar</a></li>
                         <li><a href=""><i class="bi bi-file-text icon-yellow"></i> Detalhes da conta</a></li>
@@ -112,6 +133,7 @@
                 </div>
             </div>
 
+            
         </div>
 
     </header>
@@ -1282,7 +1304,7 @@
                     arrows: false,
                     centerMode: true,
                     centerPadding: '40px',
-                    slidesToShow: 3
+                    slidesToShow: 1
                 }
                 },
                 {
