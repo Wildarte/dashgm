@@ -56,8 +56,8 @@
             </div>
 
             <div class="header right">
-                <button class="btn_defaul_red">Login</button>
-                <button class="btn_default_transparent">Registro</button>
+                <button class="btn_defaul_red" id="btn_login">Login</button>
+                <button class="btn_default_transparent" id="btn_register">Registro</button>
             </div>
 
         </div>
@@ -1245,6 +1245,68 @@
                     <label for="">
                         <input type="checkbox" name="" id="">
                         <p>Tenho 18 anos, li e concordo <a href="">{{Contrato do usuário}}</a></p>
+                    </label>
+                </div>
+
+                <div class="form_row">
+                    <button type="submit" class="w-100 btn_defaul_red">Registro</button>
+                </div>
+
+                <div class="form_row form_row_links">
+                    <a href="">Contactar Suporte</a>
+                    <a href="">Jogar Grátis</a>
+                    <a href="">Login Agora</a>
+                </div>
+
+                <div class="form_row bottom_form_modal">
+                    <p><span>Outros métodos de início de sessão</span></p>
+
+                    <div class="links_form_modal">
+                        <a href=""><img src="assets/img/google.png" alt=""></a>
+                        <a href=""><img src="assets/img/facebook.png" alt=""></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ================================================ Modals ====================================================== -->
+
+
+     <!-- ================================================ Modals ====================================================== -->
+     <div class="over_modal" id="modal_login" style="">
+        <div class="head_over_modal">
+            <span class="close_over_modal" id="close_modal_login">
+                <i class="bi bi-x-lg"></i>
+            </span>
+        </div>
+        <div class="modal">
+            <div class="head_modal">
+                <i class="bi bi-person-fill"></i>
+                <p>Login</p>
+            </div>
+
+            <form action="" class="form_modal">
+                <div class="form_row">
+                    <label for="">
+                        <i class="bi bi-person-fill"></i>
+                        <input type="text" name="" id="" placeholder="Nome de Usuário">
+                    </label>
+                </div>
+
+                <div class="form_row">
+                    <label for="">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" name="" placeholder="Senha" id="show_pass_login_input">
+                        <span class="show_pass" id="show_pass_login">
+                            <i class="bi bi-eye-slash-fill"></i>
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="form_row field_text">
+                    <label for="" class="agree_login">
+                        <input type="checkbox" name="" id="">
+                        <p>Lembrar Senha <a href="">Esqueceu a senha?</a></p>
                     </label>
                 </div>
 

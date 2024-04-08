@@ -81,6 +81,23 @@ if(show_pass_again_register){
 }
 
 
+const show_pass_login = document.getElementById('show_pass_login');
+
+if(show_pass_login){
+    show_pass_login.addEventListener('click', () => {    
+
+
+        if(show_pass_login_input.type == "password"){
+            show_pass_login_input.type = "text"
+            show_pass_login.querySelector('i').classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+        }else{
+            show_pass_login_input.type = 'password';
+            show_pass_login.querySelector('i').classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
+        }
+    
+    });
+}
+
 const modal_register = document.getElementById('modal_register');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -105,13 +122,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-//fehcar modal registro =============================
+//fechar modal registro =============================
 const close_modal_register = document.getElementById('close_modal_register');
 
 if(close_modal_register){
     close_modal_register.addEventListener('click', () => {
 
         modal_register.classList.remove('d-modal')
+    
+    });
+}
+
+const close_modal_login = document.getElementById('close_modal_login');
+
+if(close_modal_login){
+    close_modal_login.addEventListener('click', () => {
+
+        modal_login.classList.remove('d-modal')
     
     });
 }
@@ -338,3 +365,25 @@ if(btn_deposit_button){
     });
 }
 //================== control mobile =======================================================
+
+
+
+const btn_login = document.getElementById('btn_login');
+
+if(btn_login){
+    btn_login.addEventListener('click', () => {
+
+        modal_login.classList.add('d-modal')
+    
+    });
+}
+
+const btn_register = document.getElementById('btn_register');
+
+if(btn_register){
+    btn_register.addEventListener('click', () => {
+
+        modal_register.classList.add('d-modal')
+    
+    });
+}
