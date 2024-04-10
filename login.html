@@ -62,13 +62,13 @@
                 </div>
 
                 <div class="links_balance">
-                    <a href="" class="btn_defaul_red btn_small">Depósito</a>
+                    <a href="" class="btn_defaul_red btn_small" id="btn_perfil_depoisit">Depósito</a>
                     <a href="" class="btn_default_transparent btn_small">Saque</a>
                     <a href="" class="btn_default_transparent btn_small">Juros</a>
                 </div>
 
                 <div class="btn_deposit btn_defaul_red btn_small btn_set_deposit">
-                    <span class="text_btn_deposit">Depósito</span>
+                    <span class="text_btn_deposit" id="btn_perfil_depoisit2">Depósito</span>
                     <span id="btn_deposit_button"><i class="bi bi-caret-down-fill"></i></span>
                     <div class="list_select_deposit">
                         <div class="option_select_deposit">
@@ -89,7 +89,7 @@
             </div>
             
 
-            <div class="header right over_user">
+            <div class="header_right over_user">
                 <img class="img_user" src="assets/img/user.png" alt="">
                 <div class="info_user">
                     <p></p><span id="user">user09143023</span></p>
@@ -1166,15 +1166,15 @@
             <li><a href=""><i class="bi bi-gift"></i> <p>Promoção</p></a></li>
             <li><a href=""><i class="bi bi-box-arrow-up-right"></i> <p>Agente</p></a></li>
             <li><a href=""><i class="bi bi-headset"></i> <p>Suporte</p></a></li>
-            <li><a href=""><i class="bi bi-person"></i> <p>Perfil</p></a></li>
+            <li><a href="" id="btn_perfil"><i class="bi bi-person"></i> <p>Perfil</p></a></li>
         </ul>
     </div>
 
     <!-- ================================================ Modals ====================================================== -->
-    <div class="over_modal" id="modal_deposito">
+    <div class="over_modal" id="modal_deposito_balance">
         
         <div class="modal" id="content_modal_deposito">
-            <span id="close_modal_deposito">
+            <span id="close_modal_control_balance">
                 <i class="bi bi-x-lg"></i>
             </span>
             <div class="head_modal_white">
@@ -1255,26 +1255,139 @@
 
 
     <!-- ================================================ Modals ====================================================== -->
-    <div class="over_modal" id="modal_control_deposit" style="display: flex;">
-        <div class="head_over_modal">
-            <span class="close_over_modal" id="close_modal_login">
-                <i class="bi bi-x-lg"></i>
-            </span>
-        </div>
+    <div class="over_modal" id="modal_control_deposit" style="">
+        
         <div class="modal">
+            <div class="head_over_modal head_over_modal_deposit">
+                <span class="close_over_modal" id="close_modal_control_balance_deposit">
+                    <i class="bi bi-x-lg"></i>
+                </span>
+            </div>
             <div class="head_modal head_modal_balance">
                 <p>Depósito</p>
             </div>
 
-            <div class="content_modal_control_deposit">
+            <form method="" action="" class="content_modal_control_deposit">
 
                 <p class="head_row_modal_control_deposit"><i class="bi bi-phone"></i> Depósito on-line</p>
+
                 <div class="row_modal_control_deposit">
 
                     <div class="over_btn_deposit_item">
-                        <div class="btn_deposit_item">
+                        <label class="btn_deposit_item" for="pay_way">
                             <img src="assets/img/pix.png" alt="">
                             <p>PIX</p>
+                            <input type="radio" name="pay_way" id="pay_way" value="FYPay-BRL">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="row_modal_control_deposit">
+
+                    <div class="over_btn_deposit_item">
+                        <label class="btn_deposit_item" for="pay_one">
+                            <p>HKPpay</p>
+                            <input type="radio" name="pay" id="pay_one" value="HKPpay">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                        <label class="btn_deposit_item" for="pay_two">
+                            <p>FYPay(BRL)</p>
+                            <input type="radio" name="pay" id="pay_two" value="FYPay-BRL">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="row_modal_control_deposit">
+
+                    <div class="over_btn_deposit_item chose_value">
+
+                        <label class="btn_deposit_item" for="valor_10">
+                            <p>10</p>
+                            <input type="radio" name="valor_deposito" id="valor_10" value="10">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                        <label class="btn_deposit_item" for="valor_50">
+                            <p>50</p>
+                            <input type="radio" name="valor_deposito" id="valor_50" value="50">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                        <label class="btn_deposit_item" for="valor_100">
+                            <p>100</p>
+                            <input type="radio" name="valor_deposito" id="valor_100" value="100">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                        <label class="btn_deposit_item" for="valor_500">
+                            <p>500</p>
+                            <input type="radio" name="valor_deposito" id="valor_100" value="500">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                        <label class="btn_deposit_item" for="valor_1000">
+                            <p>1000</p>
+                            <input type="radio" name="valor_deposito" id="valor_1000" value="1000">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                        <label class="btn_deposit_item" for="valor_5000">
+                            <p>5000</p>
+                            <input type="radio" name="valor_deposito" id="valor_5000" value="5000">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                        <label class="btn_deposit_item" for="valor_10000">
+                            <p>10000</p>
+                            <input type="radio" name="valor_deposito" id="valor_10000" value="10000">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                        <label class="btn_deposit_item" for="valor_30000">
+                            <p>30000</p>
+                            <input type="radio" name="valor_deposito" id="valor_30000" value="30000">
+                            <span class="icon_check">
+                                <i class="bi bi-check"></i>
+                            </span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="row_modal_control_deposit">
+
+                    <div class="over_btn_deposit_item">
+                        <div class="form_row">
+                            <label for="">
+                                <span>R$</span>
+                                <input type="text" name="" id="" placeholder="Mínimo 10, máximo 50000">
+                            </label>
                         </div>
                     </div>
 
@@ -1283,17 +1396,14 @@
                 <div class="row_modal_control_deposit">
 
                     <div class="over_btn_deposit_item">
-                        <div class="btn_deposit_item">
-                            <p>HKPpay</p>
-                        </div>
-
-                        <div class="btn_deposit_item">
-                            <p>FYPay(BRL)</p>
+                        <div class="form_row">
+                            <button type="submit" class="w-100 btn_defaul_red">Recarregue agora</button>
                         </div>
                     </div>
 
                 </div>
-            </div>
+
+            </form>
 
             
         </div>

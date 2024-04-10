@@ -101,11 +101,24 @@ if(show_pass_login){
 const modal_register = document.getElementById('modal_register');
 
 document.addEventListener('DOMContentLoaded', () => {
-
     setTimeout(function(){
 
         if(modal_register){
             modal_register.classList.add('d-modal')
+        }
+
+    },2300);
+
+});
+
+const modal_deposito_balance = document.getElementById('modal_deposito_balance');
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    setTimeout(function(){
+
+        if(modal_deposito_balance){
+            modal_deposito_balance.classList.add('d-modal')
         }
 
     },2500);
@@ -116,7 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(function(){
 
-        modal_deposito.classList.add('d-modal')
+        if(modal_deposito){
+            modal_deposito.classList.add('d-modal')
+        }
+       
 
     },2000);
 
@@ -139,6 +155,16 @@ if(close_modal_login){
     close_modal_login.addEventListener('click', () => {
 
         modal_login.classList.remove('d-modal')
+    
+    });
+}
+
+const close_modal_control_balance = document.getElementById('close_modal_control_balance');
+
+if(close_modal_control_balance){
+    close_modal_control_balance.addEventListener('click', () => {
+
+        modal_deposito_balance.classList.remove('d-modal')
     
     });
 }
@@ -387,3 +413,89 @@ if(btn_register){
     
     });
 }
+
+
+
+//================================ buttons select pagto ========================================
+const over_btn_deposit_item = document.querySelectorAll('.over_btn_deposit_item');
+
+if(over_btn_deposit_item){
+
+    over_btn_deposit_item.forEach((item, index) => {
+
+        let btn_deposit_item = item.querySelectorAll('.btn_deposit_item');
+    
+        btn_deposit_item.forEach((item2, index2) => {
+    
+            item2.addEventListener('click', () => {
+    
+              
+                btn_deposit_item.forEach((item3, index3) => {
+                    item3.classList.remove('active');
+                });
+    
+                btn_deposit_item[index2].classList.add('active');
+                
+            });
+    
+        });
+    
+    });
+}
+//================================ buttons select pagto ========================================
+
+
+
+const btn_perfil_depoisit = document.getElementById('btn_perfil_depoisit');
+const modal_control_deposit = document.getElementById('modal_control_deposit');
+
+if(btn_perfil_depoisit){
+
+    btn_perfil_depoisit.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        modal_control_deposit.classList.add('d-modal')
+    
+    });
+
+}
+
+const btn_perfil_depoisit2 = document.getElementById('btn_perfil_depoisit2');
+
+if(btn_perfil_depoisit2){
+
+    btn_perfil_depoisit2.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        modal_control_deposit.classList.add('d-modal')
+    
+    });
+    
+}
+
+const close_modal_control_balance_deposit = document.getElementById('close_modal_control_balance_deposit');
+
+if(close_modal_control_balance_deposit){
+
+    close_modal_control_balance_deposit.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        modal_control_deposit.classList.remove('d-modal')
+    
+    });
+}
+
+const btn_perfil = document.getElementById('btn_perfil');
+const list_options_user = document.querySelector('.list_options_user');
+
+if(btn_perfil){
+    
+    btn_perfil.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        list_options_user.classList.toggle('open_list_options_user');
+    
+    });
+
+}
+
