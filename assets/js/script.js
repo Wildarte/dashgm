@@ -499,3 +499,110 @@ if(btn_perfil){
 
 }
 
+//================== control senha saque ===================================
+const senha_saque_input = document.querySelectorAll('.senha_saque .input input');
+const senha_saque = document.querySelectorAll('.senha_saque .input');
+
+senha_saque_input.forEach((item, index) => {
+
+    item.addEventListener('focus', () => {
+        
+        senha_saque.forEach((item2) => {
+
+            item2.classList.remove('b-red');
+
+        });
+
+        senha_saque[index].classList.add('b-red');
+        
+    });
+
+    item.addEventListener('change', () => {
+
+        if(index < senha_saque_input.length){
+
+        }
+
+    });
+
+
+})
+
+const close_modal_control_balance_saque = document.getElementById('close_modal_control_balance_saque');
+const btn_perfil_saque = document.getElementById('btn_perfil_saque');
+const btn_perfil_saque2 = document.getElementById('btn_perfil_saque2');
+const modal_control_saque = document.getElementById('modal_control_saque');
+
+if(close_modal_control_balance_saque){
+    close_modal_control_balance_saque.addEventListener('click', () => {
+
+        modal_control_saque.classList.remove('d-modal')
+    
+    });
+
+    btn_perfil_saque.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        modal_control_saque.classList.add('d-modal')
+
+    });
+
+    btn_perfil_saque2.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        modal_control_saque.classList.add('d-modal')
+
+    });
+}
+
+//================== control senha saque ===================================
+
+
+
+// =================== control sections game page =============================================================
+const list_side_game_page = document.querySelectorAll('.list_side_game_page a');
+
+if(list_side_game_page){
+    list_side_game_page.forEach((item, index) => {
+
+        item.addEventListener('click', (e) => {
+
+            e.preventDefault();
+            
+            list_side_game_page.forEach((item2, index2) => {
+
+                item2.classList.remove('btn_bg_red')
+
+            });
+
+            list_side_game_page[index].classList.add('btn_bg_red')
+    
+        });
+    
+    });
+}
+
+
+const list_game_page = document.querySelectorAll('.list_game_page button');
+
+if(list_game_page){
+    list_game_page.forEach((item, index) => {
+
+        item.addEventListener('click', (e) => {
+
+            e.preventDefault();
+            
+            list_game_page.forEach((item2, index2) => {
+
+                item2.classList.remove('btn_bg_red')
+
+            });
+
+            list_game_page[index].classList.add('btn_bg_red')
+    
+        });
+    
+    });
+}
+
+// =================== control sections game page =============================================================
