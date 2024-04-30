@@ -1751,6 +1751,24 @@ a.item_card_select:hover{
 .p-10{
     padding: 10px;
 }
+.btn_float_telegram{
+    position: fixed;
+    right: 10px;
+    bottom: 80px;
+}
+.btn_float_telegram a{
+    color: var(--color-white);
+}
+.btn_float_telegram a img{
+    width: 70px;
+}
+.btn_float_telegram span{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: var(--color-white);
+    cursor: pointer;
+}
 
 
 @media(max-width: 1560px){
@@ -2120,7 +2138,7 @@ a.item_card_select:hover{
         width: 100%;
         padding: 10px 0;
     }
-    .list_side_game_page{
+    .list_side_game_page.bg_promote_page{
         display: flex;
     }
     .list_a_promote a{

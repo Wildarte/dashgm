@@ -681,6 +681,13 @@
         </ul>
     </div>
 
+    <div class="btn_float_telegram">
+        <a href="">
+            <img src="assets/img/telegram-animado.gif" alt="">
+        </a>
+        <span id="btn_close_float_telegram"><i class="bi bi-x-circle"></i></span>
+    </div>
+
     <!-- ================================================ Modals ====================================================== -->
     <div class="over_modal" id="modal_deposito_balance">
         
@@ -1222,6 +1229,16 @@
             ]
         });
         })
+
+
+        const btn_close_float_telegram = document.getElementById('btn_close_float_telegram');
+        const btn_float_telegram = document.querySelector('.btn_float_telegram');
+
+        btn_close_float_telegram.addEventListener('click', () => {
+
+            btn_float_telegram.style.display = "none"
+
+        });
         
     </script>
 </body>
