@@ -52,6 +52,11 @@
 }
 /* general style */
 
+
+.content_body{
+    max-width: 520px;
+    margin: auto;
+}
 body{
     background-color: var(--color-quarta);
     background-image: url(../img/bg_part.png);

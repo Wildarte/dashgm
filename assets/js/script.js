@@ -1,15 +1,25 @@
 const header = document.querySelector('header.header');
 const side_menu = document.querySelector('.side_menu');
 const body_dash = document.querySelector('.body_dash');
-const height_header =  header.getBoundingClientRect().height; //height do header
-const width_side_menu = side_menu.getBoundingClientRect().width; //width do sidemenu
+if(header){
+const height_header =  header.getBoundingClientRect().height; //height do header   
+}
+if(side_menu){
+
+    const width_side_menu = side_menu.getBoundingClientRect().width; //width do sidemenu
+}
 
 
+if(side_menu){
 
-side_menu.style.height = "calc(100vh - "+height_header+"px)";//margin top sidebar
-side_menu.style.top = height_header+"px";
-body_dash.style.height = "calc(100vh - "+height_header+"px)";
-body_dash.style.width = "calc(100% - "+width_side_menu+"px)";
+    side_menu.style.height = "calc(100vh - "+height_header+"px)";//margin top sidebar
+    side_menu.style.top = height_header+"px";
+}
+if(header){
+
+    body_dash.style.height = "calc(100vh - "+height_header+"px)";
+    body_dash.style.width = "calc(100% - "+width_side_menu+"px)";
+}
 
 
 
@@ -247,12 +257,14 @@ if(btn_side){
         }else{
             if(btn_side.classList.contains('rotate')){
                 btn_side.classList.remove('rotate');
-                side_menu.classList.remove('w-0');
                 body_dash.classList.remove('w-100');
+                side_menu.classList.remove('open_side_bar');
+                over_dash.classList.remove('open_over_dash');
             }else{
                 btn_side.classList.add('rotate');
-                side_menu.classList.add('w-0');
                 body_dash.classList.add('w-100');
+                side_menu.classList.add('open_side_bar');
+                over_dash.classList.add('open_over_dash');
             }
         } 
     
@@ -606,3 +618,27 @@ if(list_game_page){
 }
 
 // =================== control sections game page =============================================================
+
+
+
+
+// ===================================== page promocao ========================================================
+const paged_promo = document.querySelectorAll('.pages_promo .paged_promo');
+const list_head_page_promocao = document.querySelectorAll('.list_head_page_promocao a');
+
+list_head_page_promocao.forEach((item,index) => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        paged_promo.forEach((item2) => {
+            item2.classList.remove('active');
+        });
+
+        list_head_page_promocao.forEach((item3) => {
+            item3.classList.remove('active');
+        });
+
+        paged_promo[index].classList.add('active');
+        list_head_page_promocao[index].classList.add('active')
+    })
+})
+// ===================================== page promocao ========================================================
